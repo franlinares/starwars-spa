@@ -1,0 +1,46 @@
+.card-base {
+  background: linear-gradient(135deg, @color-bg-card, @color-bg-card-alt);
+  border: 1px solid @color-border;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: @shadow-sm;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  flex: 1 1 260px;
+  max-width: 300px;
+  box-sizing: border-box;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: @shadow-hover;
+  }
+
+  &__name {
+    font-size: 22px;
+    font-weight: 700;
+    color: @color-heading;
+    margin-bottom: 16px;
+    border-bottom: 1px solid @color-border-subtle;
+    padding-bottom: 8px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+  }
+
+  &__label {
+    font-weight: 600;
+    color: @color-text-secondary;
+  }
+
+  &__value {
+    color: @color-text-primary;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
